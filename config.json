@@ -1,0 +1,60 @@
+{
+  "bpm": 125,
+  "port": 9000,
+  "sample_rate": 48000,
+  "loop_samples": 184320,
+  "loop_seconds": 3.84,
+  "bars_per_loop": 2,
+  "beats_per_bar": 4,
+  "stereo": true,
+  "intensity_smoothing_ms": 50,
+  "stems": {
+    "pad": {
+      "file": "pad.wav",
+      "gain_range": [0.5, 0.5],
+      "always_on": true,
+      "description": "Continuous stereo pad bed"
+    },
+    "kick": {
+      "file": "kick.wav",
+      "gain_range": [0.0, 0.8],
+      "intensity_threshold": 0.12,
+      "description": "Stereo kick pattern"
+    },
+    "perc": {
+      "file": "perc.wav",
+      "gain_range": [0.0, 0.7],
+      "intensity_threshold": 0.32,
+      "description": "Stereo hi-hat / shaker pattern"
+    },
+    "bass": {
+      "file": "bass.wav",
+      "gain_range": [0.0, 0.85],
+      "intensity_threshold": 0.45,
+      "description": "Stereo bassline"
+    },
+    "lead": {
+      "file": "lead.wav",
+      "gain_range": [0.0, 0.7],
+      "intensity_threshold": 0.68,
+      "description": "Stereo melodic lead"
+    }
+  },
+  "filters": {
+    "lowpass": {
+      "cutoff_range_hz": [400, 6400],
+      "resonance_q": 3.0,
+      "description": "RPM-driven stereo lowpass filter"
+    },
+    "delay": {
+      "time_ms": 250,
+      "feedback": 0.35,
+      "wet_level": 0.3,
+      "description": "Stereo tempo-synced 8th note delay"
+    }
+  },
+  "master": {
+    "output_gain": 0.8,
+    "description": "Final stereo output level"
+  }
+}
